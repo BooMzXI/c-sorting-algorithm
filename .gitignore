@@ -1,1 +1,6 @@
 # Nah jk. This projects only has c files. Why did you expect it to have .env file?
+# Ignore complied files
+*.exe
+*.out
+*.o 
+*.DS_Store
