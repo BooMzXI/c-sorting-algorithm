@@ -4,21 +4,21 @@ void merge_recursive(int arr[], int left, int right);
 void final_merge(int arr[], int left, int middle, int right);
 
 
-int main()
-{
+// int main()
+// {
 
-    int arr[] = {0, 2, 4, 5, 9, 7, 1};
-    int lenght = sizeof(arr) / sizeof(arr[0]);
-    merge_sort(arr, lenght);
+//     int arr[] = {0, 2, 4, 5, 9, 7, 1};
+//     int lenght = sizeof(arr) / sizeof(arr[0]);
+//     merge_sort(arr, lenght);
 
-    for (int i = 0; i < lenght; i++)
-    {
-        printf("%d", arr[i]);
-    }
-    printf("\n");
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         printf("%d", arr[i]);
+//     }
+//     printf("\n");
 
-    return (0);
-}
+//     return (0);
+// }
 
 void merge_sort(int arr[], int lenght)
 { // send index

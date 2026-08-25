@@ -16,11 +16,11 @@ void SelectionSort(int arr[], int n) {
     }
 }
 
-int main() {
-    int mock[10] = {1, 5, 7, 3, 8, 4, 0, 9, 1};
-    SelectionSort(mock, 9);
-    for(int i=0; i<9; i++) {
-        printf("%d ", mock[i]);
-    }
-    return 0;
-}
+// int main() {
+//     int mock[10] = {1, 5, 7, 3, 8, 4, 0, 9, 1};
+//     SelectionSort(mock, 9);
+//     for(int i=0; i<9; i++) {
+//         printf("%d ", mock[i]);
+//     }
+//     return 0;
+// }

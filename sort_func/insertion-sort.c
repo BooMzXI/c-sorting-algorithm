@@ -13,11 +13,11 @@ void InsertionSort(int a[], int n) {
     }
 }
 
-int main() {
-    int mock[10] = {5, 1, 4, 2, 8};
-    InsertionSort(mock, 5);
-    for(int i=0; i<5; i++) {
-        printf("%d ", mock[i]);
-    }
-    return 0;
-}
+// int main() {
+//     int mock[10] = {5, 1, 4, 2, 8};
+//     InsertionSort(mock, 5);
+//     for(int i=0; i<5; i++) {
+//         printf("%d ", mock[i]);
+//     }
+//     return 0;
+// }
