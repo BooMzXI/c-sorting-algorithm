@@ -5,20 +5,20 @@ void quick_recursive(int arr[], int left, int right);
 int partition(int arr[], int left, int right);
 void swap(int *a, int *b);
 
-int main()
-{
-    int arr[] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-    int lenght = sizeof(arr) / sizeof(arr[0]);
-    quick_sort(arr, lenght);
+// int main()
+// {
+//     int arr[] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+//     int lenght = sizeof(arr) / sizeof(arr[0]);
+//     quick_sort(arr, lenght);
 
-    for (int i = 0; i < lenght; i++)
-    {
-        printf("%d", arr[i]);
-    }
-    printf("\n");
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         printf("%d", arr[i]);
+//     }
+//     printf("\n");
 
-    return (0);
-}
+//     return (0);
+// }
 
 void swap(int *a, int *b)
 {
