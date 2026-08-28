@@ -1,0 +1,3 @@
+gcc main.c sort_func/*.c -o main "-Wl,--stack,16777216"
+สำหรับผม(ภูรี) ที่รัน quick 50000 ของ sortไม่ได้ crash ก่อน
+./main > results.csv
