@@ -6,6 +6,7 @@
 #include "data_set/reverse_data.c"
 #include "data_set/sorted_data.c"
 #include <stdlib.h>
+#include <time.h>
 
 int main()
 {
@@ -15,11 +16,14 @@ int main()
         {data_100_random, data_500_random, data_1000_random, data_5000_random, data_10000_random, data_50000_random},
         {data_100_sorted, data_500_sorted, data_1000_sorted, data_5000_sorted, data_10000_sorted, data_50000_sorted},
         {data_100_reverse, data_500_reverse, data_1000_reverse, data_5000_reverse, data_10000_reverse, data_50000_reverse}};
-    char *algo_names[5] = {"Insertion", "Selection", "Bubble", "Merge", "Quick"};
+    char *algo_names[6] = {"Insertion", "Selection", "Bubble", "Merge", "Quick","Quick_Random_Pivot"};
 
     LARGE_INTEGER frequency, start, end;
     double time_taken;
     QueryPerformanceFrequency(&frequency);
+
+    srand(time(NULL));
+
     for (int type = 0; type < 3; type++)
     { // 3 type
 
@@ -32,7 +36,7 @@ int main()
                 return 1;
             }
             printf("%s %d\n", order_names[type], sizes[dataset]);
-            for (int round = 0; round < 5; round++) // 5 sort
+            for (int round = 0; round < 6; round++) // 5 sort
             {
 
                 printf("%s\n", algo_names[round]);
@@ -68,7 +72,12 @@ int main()
                         QueryPerformanceCounter(&start);
                         quick_sort(arr_to_sort, sizes[dataset]);
                     }
-
+                    else if (round == 5) // quick
+                    {
+                        QueryPerformanceCounter(&start);
+                        quick_sort_randomP(arr_to_sort, sizes[dataset]);
+                    }
+                    
                     QueryPerformanceCounter(&end);
                     time_taken = (double)(end.QuadPart - start.QuadPart) / frequency.QuadPart;
                     printf("%.9f\n", time_taken * 1000); // millisec
