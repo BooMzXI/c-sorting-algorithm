@@ -76,7 +76,7 @@ void quick_recursive_randomP(int arr[], int left, int right)
 {
     if (left < right)
     {
-        srand(time(NULL));
+        
         // ----------------------------------------------------
         // ส่วนที่เพิ่มเข้ามา: สุ่ม Pivot
         // สุ่ม index ให้อยู่ในช่วง [left, right]
