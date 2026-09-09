@@ -10,12 +10,12 @@
 
 int main()
 {
-    int sizes[6] = {100, 500, 1000, 5000, 10000, 50000};
+    int sizes[6] = {1000, 5000, 10000, 50000,100000, 200000};
     char *order_names[3] = {"random", "sorted", "reverse"};
     int *datasets[3][6] = { //เก็บข้อมูลเป็น สามชุด ชุดละ 6 แบบ ในรูปของ address ของ array
-        {data_100_random, data_500_random, data_1000_random, data_5000_random, data_10000_random, data_50000_random},
-        {data_100_sorted, data_500_sorted, data_1000_sorted, data_5000_sorted, data_10000_sorted, data_50000_sorted},
-        {data_100_reverse, data_500_reverse, data_1000_reverse, data_5000_reverse, data_10000_reverse, data_50000_reverse}};
+        {data_1000_random, data_5000_random, data_10000_random, data_50000_random,data_100000_random, data_200000_random },
+        { data_1000_sorted, data_5000_sorted, data_10000_sorted, data_50000_sorted,data_100000_sorted, data_200000_sorted,},
+        { data_1000_reverse, data_5000_reverse, data_10000_reverse, data_50000_reverse,data_100000_reverse, data_200000_reverse,}};
     char *algo_names[6] = {"Insertion", "Selection", "Bubble", "Merge", "Quick","Quick_Random_Pivot"};
 
     LARGE_INTEGER frequency, start, end;
