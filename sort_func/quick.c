@@ -72,13 +72,12 @@ void quick_sort_randomP(int arr[], int lenght)
 {
     quick_recursive_randomP(arr, 0, lenght - 1);
 }
+
 void quick_recursive_randomP(int arr[], int left, int right)
 {
     if (left < right)
     {
-        // ----------------------------------------------------
-        // ส่วนที่เพิ่มเข้ามา: สุ่ม Pivot
-        // สุ่ม index ให้อยู่ในช่วง [left, right]
+
         int random_index = left + rand() % (right - left + 1);
 
         // สลับค่าที่สุ่มได้ ไปไว้ตำแหน่งซ้ายสุด (left)

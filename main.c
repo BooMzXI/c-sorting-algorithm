@@ -10,13 +10,27 @@
 
 int main()
 {
-    int sizes[6] = {1000, 5000, 10000, 50000,100000, 200000};
+    int sizes[6] = {1000, 5000, 10000, 50000, 100000, 200000};
     char *order_names[3] = {"random", "sorted", "reverse"};
-    int *datasets[3][6] = { //เก็บข้อมูลเป็น สามชุด ชุดละ 6 แบบ ในรูปของ address ของ array
-        {data_1000_random, data_5000_random, data_10000_random, data_50000_random,data_100000_random, data_200000_random },
-        { data_1000_sorted, data_5000_sorted, data_10000_sorted, data_50000_sorted,data_100000_sorted, data_200000_sorted,},
-        { data_1000_reverse, data_5000_reverse, data_10000_reverse, data_50000_reverse,data_100000_reverse, data_200000_reverse,}};
-    char *algo_names[6] = {"Insertion", "Selection", "Bubble", "Merge", "Quick","Quick_Random_Pivot"};
+    int *datasets[3][6] = {// เก็บข้อมูลเป็น สามชุด ชุดละ 6 แบบ ในรูปของ address ของ array
+                           {data_1000_random, data_5000_random, data_10000_random, data_50000_random, data_100000_random, data_200000_random},
+                           {
+                               data_1000_sorted,
+                               data_5000_sorted,
+                               data_10000_sorted,
+                               data_50000_sorted,
+                               data_100000_sorted,
+                               data_200000_sorted,
+                           },
+                           {
+                               data_1000_reverse,
+                               data_5000_reverse,
+                               data_10000_reverse,
+                               data_50000_reverse,
+                               data_100000_reverse,
+                               data_200000_reverse,
+                           }};
+    char *algo_names[6] = {"Insertion", "Selection", "Bubble", "Merge", "Quick", "Quick_Random_Pivot"};
 
     LARGE_INTEGER frequency, start, end;
     double time_taken;
@@ -43,7 +57,7 @@ int main()
 
                 for (int i = 0; i < 10; i++) // 10 round
                 {
-                    for (int j = 0; j < sizes[dataset]; j++) //copy dataset array to dummy
+                    for (int j = 0; j < sizes[dataset]; j++) // copy dataset array to dummy
                     {
                         arr_to_sort[j] = datasets[type][dataset][j];
                     }
@@ -77,7 +91,7 @@ int main()
                         QueryPerformanceCounter(&start);
                         quick_sort_randomP(arr_to_sort, sizes[dataset]);
                     }
-                    
+
                     QueryPerformanceCounter(&end);
                     time_taken = (double)(end.QuadPart - start.QuadPart) / frequency.QuadPart;
                     printf("%.9f\n", time_taken * 1000); // millisec

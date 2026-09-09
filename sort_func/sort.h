@@ -1,7 +1,6 @@
 #ifndef SORT_H
 #define SORT_H
 
-
 void merge_sort(int arr[], int lenght);
 void quick_sort(int arr[], int lenght);
 void SelectionSort(int arr[], int n);
